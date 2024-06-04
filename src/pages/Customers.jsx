@@ -13,6 +13,7 @@ import {
 } from "@syncfusion/ej2-react-grids";
 import { customersData, customersGrid } from "../data/dummy";
 import { Header } from "../components";
+import { toolbarItems } from "@syncfusion/ej2/filemanager";
 
 const Customers = () => {
   return (
@@ -24,7 +25,8 @@ const Customers = () => {
         allowPaging
         allowSorting
         toolbar={["Delete"]}
-        editSettings={{ allowDeleting: true, allowEditing: true }}
+        toolbarItem={["Add"]}
+        editSettings={{ allowDeleting: true, allowEditing: true , allowAdding:true}}
       >
         <ColumnsDirective>
           {customersGrid.map((item, index) => (
